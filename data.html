@@ -21,31 +21,23 @@
         <h2>Inflation Data & Forecasts (2010-2026)</h2>
         <img src="chart.png" alt="Inflation Chart">
         
-        <table>
-            <thead>
-                <tr><th>Year</th><th>Rate (%)</th></tr>
-            </thead>
-            <tbody id="table-body">
-                <tr><td>2010</td><td>3.02</td></tr>
-                <tr><td>2011</td><td>3.46</td></tr>
-                <tr><td>2012</td><td>3.72</td></tr>
-                <tr><td>2013</td><td>1.63</td></tr>
-                <tr><td>2014</td><td>-0.19</td></tr>
-                <tr><td>2015</td><td>-2.43</td></tr>
-                <tr><td>2016</td><td>-1.54</td></tr>
-                <tr><td>2017</td><td>0.89</td></tr>
-                <tr><td>2018</td><td>10.61</td></tr>
-                <tr style="font-weight:bold; color:red;"><td>2019</td><td>255.30</td></tr>
-                <tr style="font-weight:bold; color:red;"><td>2020</td><td>557.20</td></tr>
-                <tr><td>2021</td><td>98.54</td></tr>
-                <tr><td>2022</td><td>104.70</td></tr>
-                <tr><td>2023</td><td>172.20</td></tr>
-                <tr style="font-weight:bold; color:red;"><td>2024</td><td>553.00</td></tr>
-                <tr><td>2025</td><td>24.50</td></tr>
-                <tr><td>2026</td><td>12.00</td></tr>
-            </tbody>
         </table>
-        <p>Source: [FRED St. Louis Fed](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE)</p>
-    </div>
+
+        <div class="methodology-box" style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-top: 40px; border-left: 5px solid #2c3e50;">
+            <h4 style="margin-top: 0; color: #2c3e50;">Technical Methodology</h4>
+            <p style="font-size: 0.95em; color: #555;">
+                The dataset was processed using the <strong>Pandas</strong> library in Python. Historical data (2010–2022) was pulled directly from the St. Louis Fed API. To provide a complete economic outlook, I manually integrated 2023–2024 actuals and 2025–2026 IMF stabilization targets into a unified data frame for visualization via Matplotlib.
+            </p>
+        </div>
+
+        <h2 style="color: #d35400; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-top: 50px; font-size: 1.8em;">Formal Data Sources</h2>
+        <div class="reference-list" style="background: #fafafa; padding: 30px; border-radius: 8px; font-size: 0.9em; border: 1px solid #f0f0f0; list-style: none; color: #7f8c8d;">
+            <li style="margin-bottom: 15px;">Federal Reserve Economic Data (FRED). (2026). <i>Inflation, consumer prices for Zimbabwe (FPCPITOTLZGZWE)</i>. St. Louis Fed. <a href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE" style="color: #3498db; text-decoration: none;">Explore Original Dataset</a></li>
+            <li style="margin-bottom: 15px;">International Monetary Fund (IMF). (2024). <i>World Economic Outlook Database: Zimbabwe Projection Series</i>. <a href="https://www.imf.org/en/Countries/ZWE" style="color: #3498db; text-decoration: none;">View IMF Country Report</a></li>
+            <li>World Bank Group. (2026). <i>Consumer Price Index (CPI) Metadata: Zimbabwe</i>. <a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW" style="color: #3498db; text-decoration: none;">View World Bank Indicators</a></li>
+        </div>
+    </div> <footer style="text-align: center; padding: 60px; color: #bdc3c7; font-size: 0.85em;">
+        © 2026 Mzimazisi Mabaso | Programming Project | Data Visualization Portfolio
+    </footer>
 </body>
 </html>
