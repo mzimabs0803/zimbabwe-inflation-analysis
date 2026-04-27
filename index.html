@@ -6,7 +6,6 @@
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; max-width: 1100px; margin: 0 auto; padding: 0; color: #2c3e50; background-color: #f0f2f5; }
         
-        /* Hero Section with Great Zimbabwe Background */
         .hero { 
             background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('great_zim.jpg'); 
             background-size: cover; 
@@ -19,7 +18,6 @@
 
         .container { padding: 50px; background: white; margin-top: -60px; border-radius: 15px; position: relative; box-shadow: 0 15px 40px rgba(0,0,0,0.15); margin-bottom: 60px; }
         
-        /* Professional Navigation (No Emojis) */
         nav { display: flex; justify-content: center; gap: 25px; margin-bottom: 40px; }
         nav a { 
             text-decoration: none; 
@@ -27,7 +25,7 @@
             font-weight: bold; 
             padding: 12px 35px; 
             border: 2px solid #d35400; 
-            border-radius: 5px; /* Squared edges for a more formal look */
+            border-radius: 5px; 
             transition: 0.3s; 
             background: white; 
             text-transform: uppercase;
@@ -48,8 +46,11 @@
         .data-card p { margin: 10px 0 0; font-size: 2.2em; font-weight: bold; color: #e67e22; }
 
         .analysis-section { margin: 40px 0; }
-        .reference-list { background: #f8f9fa; padding: 30px; border-radius: 8px; font-size: 0.95em; border: 1px solid #e9ecef; }
-        .reference-list li { margin-bottom: 15px; }
+        .citation { color: #d35400; text-decoration: none; font-weight: 500; font-size: 0.9em; }
+        .citation:hover { text-decoration: underline; }
+
+        .reference-list { background: #f8f9fa; padding: 30px; border-radius: 8px; font-size: 0.95em; border: 1px solid #e9ecef; list-style: none; }
+        .reference-list li { margin-bottom: 15px; padding-left: 20px; text-indent: -20px; }
         
         footer { text-align: center; padding: 60px; color: #95a5a6; font-size: 0.9em; border-top: 1px solid #eee; }
     </style>
@@ -91,31 +92,29 @@
     
     <div class="analysis-section">
         <h3>1. Stability & Deflation (2010–2016)</h3>
-        <p>Following the hyperinflation crisis of 2008, Zimbabwe adopted a multi-currency system. This move anchored the economy, leading to a period of remarkable stability where inflation remained in the single digits. By 2015, the economy actually entered a <strong>deflationary phase</strong> (-2.4%), driven by a strengthening US Dollar and a critical shortage of liquidity in the domestic market.</p>
+        <p>Following the 2008 hyperinflation crisis, the adoption of a multi-currency system anchored the economy. During this era, inflation remained low, averaging approximately 3% <a class="citation" href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW">(World Bank, 2026)</a>. By 2015, a strengthening US Dollar and severe liquidity shortages pushed the nation into a deflationary phase of -2.4% <a class="citation" href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE">(FRED, 2026)</a>.</p>
         
-        <h3>2. Bond Notes & Transition (2017–2018)</h3>
-        <p>To address the US Dollar shortage, the government introduced "Bond Notes." While officially pegged 1:1 with the USD, market confidence quickly eroded. This led to the emergence of a parallel market and the beginning of a new inflationary climb as the nation prepared for leadership transitions in 2017 and the 2018 General Election.</p>
+        <h3>2. Political Transition & Bond Notes (2017–2018)</h3>
+        <p>The year 2017 marked a pivotal turning point both politically and economically. The <strong>impeachment proceedings and subsequent resignation of Robert Mugabe</strong> created a vacuum of both leadership and market certainty. To combat a growing shortage of physical USD, the government increased the circulation of "Bond Notes." While officially pegged 1:1, the political upheaval caused market confidence to vanish, triggering a climb in prices that moved the economy out of deflation and into rising double-digit inflation <a class="citation" href="https://www.imf.org/en/Countries/ZWE">(IMF, 2024)</a>.</p>
 
-        <h3>3. The Currency Crisis (2019–2023)</h3>
-        <p>The formal re-introduction of a local currency (RTGS) in 2019 triggered a massive market shock. Inflation skyrocketed to **557% by 2020**. Despite a temporary dip in 2021 as the USD was re-authorized for use, the lack of a stable commodity anchor resulted in chronic price instability for nearly five years.</p>
+        <h3>3. Currency Re-introduction & Hyperinflation (2019–2023)</h3>
+        <p>The 2019 move to abolish the multi-currency system in favor of the RTGS dollar caused an immediate currency collapse. Annual inflation rates skyrocketed, reaching a staggering 557.2% in 2020 <a class="citation" href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE">(St. Louis Fed, 2026)</a>. Despite a brief period of "blended" rates used to mask volatility, the lack of a stable anchor led to chronic price increases for nearly half a decade.</p>
 
-        <h3>4. Gold Backing & The ZiG (2024–Present)</h3>
-        <p>In April 2024, the Reserve Bank launched the **ZiG (Zimbabwe Gold)**. Unlike previous local units, the ZiG is supported by 2.5 tonnes of physical gold and $100 million in foreign reserves. According to **[IMF Reports](https://www.imf.org/en/Countries/ZWE)**, this shift is expected to lower inflation to 12% by late 2026, marking a new chapter in Zimbabwe's monetary history.</p>
+        <h3>4. The ZiG Monetary Reform (2024–Present)</h3>
+        <p>In April 2024, the <strong>Reserve Bank of Zimbabwe</strong> launched the Zimbabwe Gold (ZiG). This structured currency is backed by physical reserves, including 2.5 tonnes of gold <a class="citation" href="https://www.rbz.co.zw/">(RBZ, 2024)</a>. Projections indicate a sharp stabilization toward 12% by late 2026, though the success of this phase depends entirely on maintaining the gold-to-currency ratio and avoiding unbacked money supply growth.</p>
     </div>
 
-    <h2>Data & Reference Citations</h2>
+    <h2>Formal References</h2>
     <div class="reference-list">
-        <ul>
-            <li><strong>World Bank:</strong> Data on <strong>[Annual CPI Percentage Change](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW)</strong> for Zimbabwe.</li>
-            <li><strong>St. Louis Fed (FRED):</strong> Primary data source for the **[FPCPITOTLZGZWE](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE)** series used in visualization.</li>
-            <li><strong>International Monetary Fund:</strong> Projections and economic analysis from the **[2024 Zimbabwe Country Report](https://www.imf.org/en/Countries/ZWE)**.</li>
-            <li><strong>Reserve Bank of Zimbabwe:</strong> Technical specifications regarding the **[ZiG Currency Anchor](https://www.rbz.co.zw/)**.</li>
-        </ul>
+        <li>Federal Reserve Economic Data (FRED). (2026). <i>Inflation, consumer prices for Zimbabwe (FPCPITOTLZGZWE)</i>. St. Louis Fed. <a href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE">https://fred.stlouisfed.org/series/FPCPITOTLZGZWE</a></li>
+        <li>International Monetary Fund (IMF). (2024). <i>Zimbabwe: 2024 Article IV Consultation-Press Release; Staff Report; and Statement by the Executive Director for Zimbabwe</i>. <a href="https://www.imf.org/en/Countries/ZWE">https://www.imf.org/en/Countries/ZWE</a></li>
+        <li>Reserve Bank of Zimbabwe (RBZ). (2024). <i>2024 Monetary Policy Statement: Recalibrating the Monetary Policy Framework to Re-anchor Inflation and Exchange Rate Expectations</i>. <a href="https://www.rbz.co.zw/">https://www.rbz.co.zw/</a></li>
+        <li>World Bank Open Data. (2026). <i>Inflation, consumer prices (annual %) - Zimbabwe</i>. <a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW">https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW</a></li>
     </div>
 </div>
 
 <footer>
-    © 2026 Mzimazisi Mabaso | Programming Project | Data Visualization Portfolio
+    © 2026 Mzimazisi Mabaso | Programming Project | Data Visualization Series
 </footer>
 
 </body>
