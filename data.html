@@ -4,40 +4,75 @@
     <meta charset="UTF-8">
     <title>Inflation Data - Zimbabwe</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 40px; color: #2c3e50; background-color: #f9f9f9; }
-        .container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h2 { color: #d35400; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        nav a { text-decoration: none; color: #3498db; font-weight: bold; }
-        img { width: 100%; border-radius: 10px; margin: 20px 0; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { padding: 10px; border: 1px solid #eee; text-align: center; }
-        th { background: #d35400; color: white; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; max-width: 1000px; margin: 0 auto; padding: 0; color: #2c3e50; background-color: #f4f7f9; }
+        .header-bar { background: #2c3e50; color: white; padding: 60px 20px; text-align: center; border-bottom: 6px solid #d35400; }
+        .container { background: white; padding: 50px; margin-top: -40px; border-radius: 12px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); position: relative; margin-bottom: 60px; }
+        
+        nav { margin-bottom: 40px; }
+        nav a { text-decoration: none; color: #d35400; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9em; }
+        nav a:hover { border-bottom: 2px solid #d35400; }
+
+        h2 { color: #d35400; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-top: 40px; }
+        
+        /* Table Styling */
+        table { width: 100%; border-collapse: collapse; margin-top: 25px; background: white; }
+        th, td { padding: 14px; border: 1px solid #eee; text-align: center; }
+        th { background: #2c3e50; color: white; text-transform: uppercase; font-size: 0.85em; letter-spacing: 1px; }
         tr:nth-child(even) { background: #fafafa; }
+        .peak-row { color: #e74c3c; font-weight: bold; }
+        .forecast-row { color: #27ae60; font-style: italic; }
+
+        .methodology-box { background: #fffcf9; padding: 30px; border-radius: 8px; margin-top: 50px; border-left: 5px solid #d35400; }
+        .reference-list { background: #fafafa; padding: 35px; border-radius: 8px; font-size: 0.95em; border: 1px solid #f0f0f0; list-style: none; margin-top: 20px; color: #7f8c8d; }
+        .reference-list li { margin-bottom: 15px; padding-left: 25px; text-indent: -25px; line-height: 1.6; }
+        .reference-list a { color: #3498db; text-decoration: none; font-weight: 500; }
+        
+        footer { text-align: center; padding: 80px 20px; color: #bdc3c7; font-size: 0.85em; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav><a href="index.html">← Back to Home</a></nav>
-        <h2>Inflation Data & Forecasts (2010-2026)</h2>
-        <img src="chart.png" alt="Inflation Chart">
-        
-        </table>
 
-        <div class="methodology-box" style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin-top: 40px; border-left: 5px solid #2c3e50;">
-            <h4 style="margin-top: 0; color: #2c3e50;">Technical Methodology</h4>
-            <p style="font-size: 0.95em; color: #555;">
-                The dataset was processed using the <strong>Pandas</strong> library in Python. Historical data (2010–2022) was pulled directly from the St. Louis Fed API. To provide a complete economic outlook, I manually integrated 2023–2024 actuals and 2025–2026 IMF stabilization targets into a unified data frame for visualization via Matplotlib.
-            </p>
-        </div>
+<div class="header-bar">
+    <h1>Data Analysis & Forecasting</h1>
+    <p>A Comprehensive Review of Zimbabwe's Consumer Price Index (2010-2026)</p>
+</div>
 
-        <h2 style="color: #d35400; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-top: 50px; font-size: 1.8em;">Formal Data Sources</h2>
-        <div class="reference-list" style="background: #fafafa; padding: 30px; border-radius: 8px; font-size: 0.9em; border: 1px solid #f0f0f0; list-style: none; color: #7f8c8d;">
-            <li style="margin-bottom: 15px;">Federal Reserve Economic Data (FRED). (2026). <i>Inflation, consumer prices for Zimbabwe (FPCPITOTLZGZWE)</i>. St. Louis Fed. <a href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE" style="color: #3498db; text-decoration: none;">Explore Original Dataset</a></li>
-            <li style="margin-bottom: 15px;">International Monetary Fund (IMF). (2024). <i>World Economic Outlook Database: Zimbabwe Projection Series</i>. <a href="https://www.imf.org/en/Countries/ZWE" style="color: #3498db; text-decoration: none;">View IMF Country Report</a></li>
-            <li>World Bank Group. (2026). <i>Consumer Price Index (CPI) Metadata: Zimbabwe</i>. <a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW" style="color: #3498db; text-decoration: none;">View World Bank Indicators</a></li>
-        </div>
-    </div> <footer style="text-align: center; padding: 60px; color: #bdc3c7; font-size: 0.85em;">
-        © 2026 Mzimazisi Mabaso | Programming Project | Data Visualization Portfolio
-    </footer>
-</body>
-</html>
+<div class="container">
+    <nav><a href="index.html">← Back to Overview</a></nav>
+
+    <h2>Consumer Price Index (CPI) Full Dataset</h2>
+    <p>The following table tracks the annual inflation rate percentage. High-volatility years and future stabilization targets have been highlighted to show the trajectory of the currency reforms.</p>
+    
+    <table>
+        <thead>
+            <tr><th>Year</th><th>Inflation Rate (%)</th><th>Economic Status</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>2010</td><td>3.02%</td><td>Dollarization Stability</td></tr>
+            <tr><td>2011</td><td>3.46%</td><td>Stabilization</td></tr>
+            <tr><td>2012</td><td>3.72%</td><td>Stabilization</td></tr>
+            <tr><td>2013</td><td>1.63%</td><td>Liquidity Tightening</td></tr>
+            <tr><td>2014</td><td>-0.19%</td><td>Deflationary Entry</td></tr>
+            <tr><td>2015</td><td>-2.43%</td><td>Deflationary Peak</td></tr>
+            <tr><td>2016</td><td>-1.54%</td><td>Deflation</td></tr>
+            <tr><td>2017</td><td>0.89%</td><td>Mugabe Resignation Transition</td></tr>
+            <tr><td>2018</td><td>10.61%</td><td>Bond Note Devaluation</td></tr>
+            <tr class="peak-row"><td>2019</td><td>255.30%</td><td>Currency Re-introduction</td></tr>
+            <tr class="peak-row"><td>2020</td><td>557.20%</td><td>Hyperinflation Peak</td></tr>
+            <tr><td>2021</td><td>98.54%</td><td>Policy Correction</td></tr>
+            <tr><td>2022</td><td>104.70%</td><td>High Volatility</td></tr>
+            <tr><td>2023</td><td>172.20%</td><td>Late RTGS Crisis</td></tr>
+            <tr class="peak-row"><td>2024</td><td>553.00%</td><td>Pre-ZiG Peak</td></tr>
+            <tr class="forecast-row"><td>2025</td><td>24.50%</td><td>IMF Stabilization Target</td></tr>
+            <tr class="forecast-row"><td>2026</td><td>12.00%</td><td>Recovery Goal</td></tr>
+        </tbody>
+    </table>
+
+    <div class="methodology-box">
+        <h4 style="margin-top: 0;">Technical Methodology</h4>
+        <p>The historical data (2010–2022) was sourced from the **[FRED (St. Louis Fed) API](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE)** and processed using the Python **Pandas** library. To provide a complete narrative, I integrated current **[Reserve Bank of Zimbabwe](https://www.rbz.co.zw/)** 2024 actuals and **[IMF](https://www.imf.org/en/Countries/ZWE)** 2025–2026 stabilization forecasts. This unified dataset allows for a visual bridge between past instability and future policy targets.</p>
+    </div>
+
+    <h2>Formal Scholarly References</h2>
+    <ul class="reference-list">
+        <li>Federal Reserve Economic Data (FRED). (2026). <i>Inflation, consumer prices for Zimbabwe (FPCPITOTLZGZWE)</i>. St. Louis Fed.
