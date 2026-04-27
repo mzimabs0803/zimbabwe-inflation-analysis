@@ -5,27 +5,62 @@
     <title>Zimbabwe’s CPI Trends (2010–2026)</title>
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.8; max-width: 1100px; margin: 0 auto; padding: 0; color: #2c3e50; background-color: #f4f7f9; }
+        
         .hero { 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('gold_back.jpeg'); 
-            background-size: cover; background-position: center; color: white; padding: 130px 40px; text-align: center; border-bottom: 8px solid #d35400; 
+            background-size: cover; 
+            background-position: center; 
+            color: white; 
+            padding: 130px 40px; 
+            text-align: center; 
+            border-bottom: 8px solid #d35400; 
         }
+
         .container { padding: 60px; background: white; margin-top: -70px; border-radius: 12px; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-bottom: 80px; }
+        
         nav { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; }
-        nav a { text-decoration: none; color: #d35400; font-weight: bold; padding: 14px 40px; border: 2px solid #d35400; border-radius: 4px; background: white; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85em; transition: 0.3s; }
+        nav a { 
+            text-decoration: none; 
+            color: #d35400; 
+            font-weight: bold; 
+            padding: 14px 40px; 
+            border: 2px solid #d35400; 
+            border-radius: 4px; 
+            background: white; 
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.85em;
+            transition: 0.3s;
+        }
         nav a:hover { background: #d35400; color: white; }
+
         h1 { font-size: 2.8em; margin: 0; letter-spacing: -1px; font-weight: 800; line-height: 1.2; }
         h2 { color: #d35400; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-top: 60px; font-size: 2em; }
         h3 { color: #e67e22; margin-top: 40px; font-size: 1.5em; }
+        
         .section-img { width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
-        .graph-img { width: 100%; border-radius: 8px; margin: 30px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        
+        /* Interactive Graph Styling */
+        .graph-link { display: block; position: relative; text-decoration: none; transition: 0.3s; margin: 30px 0; }
+        .graph-link:hover { transform: scale(1.01); }
+        .graph-img { width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
+        .graph-overlay { 
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            background: rgba(44, 62, 80, 0.85); color: white; padding: 12px 24px; border-radius: 30px;
+            opacity: 0; transition: 0.3s; font-weight: bold; pointer-events: none; font-size: 1.1em;
+        }
+        .graph-link:hover .graph-overlay { opacity: 1; }
+
         .intro-box { border-left: 5px solid #d35400; padding: 30px 40px; background: #fffcf9; margin: 40px 0; font-size: 1.1em; }
+        
         .data-card-row { display: flex; gap: 25px; margin: 50px 0; flex-wrap: wrap; }
         .data-card { flex: 1; min-width: 250px; background: #2c3e50; color: white; padding: 35px 20px; border-radius: 8px; text-align: center; }
         .data-card p { margin: 15px 0 0; font-size: 2.5em; font-weight: bold; color: #e67e22; }
+
         .analysis-section p { margin-bottom: 25px; text-align: justify; }
-        .cite-link { color: #d35400; text-decoration: none; font-weight: 600; font-style: italic; }
         .reference-list { background: #fafafa; padding: 40px; border-radius: 8px; font-size: 0.95em; border: 1px solid #f0f0f0; list-style: none; padding-left: 40px; }
         .reference-list li { margin-bottom: 15px; text-indent: -25px; }
+
         footer { text-align: center; padding: 80px 20px; color: #bdc3c7; font-size: 0.85em; border-top: 1px solid #eee; }
     </style>
 </head>
@@ -37,7 +72,9 @@
 </div>
 
 <div class="container">
-    <nav><a href="data.html">The Dataset</a></nav>
+    <nav>
+        <a href="data.html">The Dataset</a>
+    </nav>
 
     <div class="intro-box">
         <strong>Abstract:</strong> This project analyzes Consumer Price Index (CPI) trends in Zimbabwe from 2010 to 2026, focusing on how currency regime shifts and political transitions influenced inflation dynamics. It argues that inflation volatility is primarily driven by changes in monetary frameworks and declining policy credibility rather than external shocks.
@@ -45,50 +82,44 @@
     </div>
 
     <div class="data-card-row">
-        <div class="data-card"><h4>Decadal Average</h4><p>79.6%</p></div>
-        <div class="data-card"><h4>Hyperinflation Peak</h4><p>557.2%</p></div>
-        <div class="data-card"><h4>2026 Performance</h4><p>4.4%</p></div>
+        <div class="data-card">
+            <h4>Decadal Average</h4>
+            <p>79.6%</p>
+        </div>
+        <div class="data-card">
+            <h4>Hyperinflation Peak</h4>
+            <p>557.2%</p>
+        </div>
+        <div class="data-card">
+            <h4>2026 Performance</h4>
+            <p>4.4%</p>
+        </div>
     </div>
 
     <h2>Visualizing the Trend</h2>
-    <img src="chart.png" class="graph-img" alt="Inflation Chart 2010-2026">
+    <a href="data.html" class="graph-link">
+        <img src="chart.png" class="graph-img" alt="Inflation Chart 2010-2026">
+        <div class="graph-overlay">Click to View Full Dataset</div>
+    </a>
 
     <h2>Analysis: The Decadal Economic Cycle</h2>
     
     <div class="analysis-section">
         <h3>Phase 1: Stability and Deflation (2010–2016)</h3>
         <img src="multi_currency.jpg" class="section-img" alt="Multi-currency era">
-        <p>Following the 2008 hyperinflation crisis, Zimbabwe adopted a multi-currency system dominated by the <strong>US Dollar and South African Rand</strong>. This shift eliminated uncontrolled money supply growth, leading to price stability with inflation averaging 3%. However, a strengthening USD eventually reduced export competitiveness and constrained liquidity, culminating in deflation by 2015.</p>
+        <p>Following the 2008 hyperinflation crisis, Zimbabwe adopted a multi-currency system dominated by the US Dollar and South African Rand. This shift effectively eliminated uncontrolled money supply growth, leading to price stability with inflation averaging approximately 3%. However, a strengthening USD eventually reduced export competitiveness and constrained liquidity, culminating in deflation by 2015.</p>
         
         <h3>Phase 2: Political Transition and Bond Notes (2017–2018)</h3>
         <img src="mugabe.jpg" class="section-img" alt="Robert Mugabe transition">
-        <p>The resignation of Robert Mugabe in 2017 marked a significant political turning point. To ease cash shortages, the government introduced "Bond Notes" officially pegged at parity with the USD. However, declining confidence undermined the peg. Market participants began pricing bond notes at a discount, signaling the re-emergence of inflationary pressures.</p>
+        <p>The resignation of Robert Mugabe in 2017 marked a significant political turning point. To ease cash shortages, the government introduced bond notes officially pegged at parity with the USD. However, declining confidence undermined the peg. Market participants began pricing bond notes at a discount, signaling the re-emergence of inflationary pressures and highlighting the importance of credibility.</p>
 
         <h3>Phase 3: Currency Crisis and Hyperinflation (2019–2023)</h3>
         <img src="rtgs.jpg" class="section-img" alt="RTGS Currency Collapse">
-        <p>In 2019, Zimbabwe reintroduced the RTGS dollar, ending the multi-currency era. Without sufficient reserves or policy credibility, the currency rapidly depreciated. This triggered exchange rate pass-through effects, causing import prices to surge and inflation to peak at <strong>557.2% in 2020</strong>.</p>
+        <p>In 2019, Zimbabwe reintroduced a local currency (RTGS dollar), ending the multi-currency era. Without sufficient reserves or policy credibility, the currency rapidly depreciated. This triggered exchange rate pass-through effects, causing import prices to surge and inflation to peak at 557.2% in 2020. During this period, a breakdown in formal monetary systems forced a reliance on parallel markets.</p>
 
-        <h3>Phase 4: Gold-Backed Currency (2024–Present)</h3>
+        <h3>Phase 4: Gold-Backed Currency and Stabilization (2024–Present)</h3>
         <img src="civilian_zig.jpg" class="section-img" alt="Civilian holding ZiG currency">
-        <p>In April 2024, the Reserve Bank introduced the Zimbabwe Gold (ZiG), backed by physical reserves. While early projections suggested a 12% target for 2026, current performance indicates a more significant recovery with inflation stabilizing at <strong>4.4%</strong>. This represents a pivotal attempt to anchor monetary value to tangible assets.</p>
+        <p>In April 2024, the Reserve Bank introduced the Zimbabwe Gold (ZiG), a currency backed by physical gold reserves. While early projections from the IMF suggested a stabilization target of 12% by 2026, current performance data indicates a more significant recovery, with inflation stabilizing at <strong>4.4%</strong>. This represents a pivotal attempt to anchor monetary value to tangible assets and restore public trust.</p>
 
         <h2>Discussion & Comparative Insight</h2>
-        <p>Zimbabwe’s trajectory illustrates that inflation is an institutional phenomenon. Money supply dynamics, exchange rate pass-through, and public expectations are the primary drivers. Similar patterns in <strong>Venezuela and Argentina</strong> suggest that these challenges are common in unstable monetary regimes where policy inconsistency erodes fiscal discipline.</p>
-
-        <h3>Methodology & Limitations</h3>
-        <p>This study applies a periodization approach using data from the <strong>World Bank</strong> and <strong>FRED</strong>. Limitations include distortions from informal parallel market pricing, exchange rate duality, and potential underreporting in official statistics.</p>
-    </div>
-
-    <h2>Scholarly References</h2>
-    <ul class="reference-list">
-        <li>Federal Reserve Economic Data (FRED). (2026). Inflation, consumer prices for Zimbabwe (FPCPITOTLZGZWE). St. Louis Fed.</li>
-        <li>International Monetary Fund (IMF). (2024). Zimbabwe: 2024 Article IV Consultation.</li>
-        <li>Reserve Bank of Zimbabwe (RBZ). (2024). 2024 Monetary Policy Statement.</li>
-        <li>World Bank Open Data. (2026). Inflation, consumer prices (annual %) - Zimbabwe.</li>
-    </ul>
-</div>
-
-<footer>© 2026 Mzimazisi Mabaso | Programming Project | Data Visualization Portfolio</footer>
-
-</body>
-</html>
+        <p>Zimbabwe’s trajectory illustrates that inflation is not solely a monetary phenomenon but also an institutional one. Money supply dynamics, exchange rate pass-through, and public expectations are the primary drivers. Similar patterns observed in <strong>Venezuela and Argentina</strong> suggest that Zimbabwe’s experience reflects broader structural challenges common in unstable monetary regimes
