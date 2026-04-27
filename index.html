@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Zimbabwe Inflation Analysis (2010-2026)</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 40px; color: #2c3e50; background-color: #f9f9f9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 40px; color: #2c3e50; background-color: #f9f9f9; }
         .container { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         h1 { color: #d35400; border-bottom: 3px solid #d35400; padding-bottom: 10px; }
         h3 { color: #e67e22; margin-top: 30px; border-left: 5px solid #d35400; padding-left: 15px; }
-        img { width: 100%; border-radius: 10px; margin: 20px 0; }
+        img { width: 100%; border-radius: 10px; margin: 20px 0; display: block; }
         .context-box { background: #fff5e6; padding: 20px; border-radius: 10px; margin: 20px 0; border: 1px solid #ffe0b2; }
-        .flex-row { display: flex; gap: 20px; align-items: center; margin: 20px 0; }
-        .flex-item { flex: 1; }
+        .flex-row { display: flex; gap: 20px; align-items: center; margin: 20px 0; flex-wrap: wrap; }
+        .flex-item { flex: 1; min-width: 300px; }
         .inflation-table { width: 100%; border-collapse: collapse; margin-top: 25px; }
         .inflation-table thead tr { background: #d35400; color: white; }
         .inflation-table th, .inflation-table td { padding: 12px; border: 1px solid #eee; text-align: center; }
         .inflation-table tr:nth-child(even) { background: #fafafa; }
         .highlight { color: #e74c3c; font-weight: bold; }
+        .footer { margin-top: 40px; font-size: 0.9em; color: #7f8c8d; text-align: center; border-top: 1px solid #eee; padding-top: 20px; }
     </style>
 </head>
 <body>
@@ -23,54 +25,47 @@
         <h1>Zimbabwe's Inflation Journey: 2010 - 2026</h1>
         <p><strong>By Mzimazisi Mabaso</strong></p>
         
-        <p>This report analyzes the volatile economic landscape of Zimbabwe. As a native Zimbabwean, I chose this [FRED dataset](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE) to visualize how political shifts and currency changes directly impact the cost of living.</p>
+        <p>This report analyzes the volatile economic landscape of Zimbabwe. As a native Zimbabwean, I utilized this [FRED dataset](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE) to visualize how political shifts and currency transitions directly impact the cost of living and national stability.</p>
 
         <h3>1. Historical Data Visualization</h3>
-        <img src="chart.png" alt="Inflation Chart">
-        <p><i>The orange trend line highlights the 2020 hyperinflation peak and the projected stabilization following the 2024 currency reform.</i></p>
+        <img src="chart.png" alt="Zimbabwe Inflation Chart">
+        <p><i>The orange trend line highlights the massive 2020 hyperinflation peak and the subsequent projected stabilization following the 2024 currency reforms.</i></p>
 
         <div class="context-box">
             <h4>Political Context: Elections & Leadership</h4>
-            <p>The massive spike to 557% in 2020 followed the 2018 General Election and the subsequent move to end the "Multi-Currency" era. The market's lack of confidence in the new local currency at the time led to the rapid devaluation seen in the data.</p>
+            <p>The dramatic spike to 557% in 2020 followed the 2018 General Election. The decision to end the multi-currency era and re-introduce a local unit without sufficient reserves led to a lack of market confidence, causing the rapid devaluation reflected in the data.</p>
         </div>
 
         <h3>2. The ZiG Transition (April 2024)</h3>
         <div class="flex-row">
             <div class="flex-item">
-                <p>In early 2024, the Reserve Bank of Zimbabwe (RBZ) introduced the <b>ZiG (Zimbabwe Gold)</b>. Backed by gold and foreign currency reserves, it represents the government's latest attempt to break the cycle of hyperinflation shown in my 2024 data points.</p>
+                <p>In April 2024, the Reserve Bank of Zimbabwe (RBZ) introduced the <b>ZiG (Zimbabwe Gold)</b>. This currency is backed by a composite basket of foreign exchange and 2.5 tonnes of gold. It represents a major policy pivot intended to anchor the economy and prevent the hyperinflation cycles seen in 2020 and early 2024.</p>
             </div>
             <div class="flex-item">
-                <img src="rbz_intro.jpg" alt="RBZ ZiG Introduction" style="max-width: 300px;">
+                <img src="rbz_intro.jpg" alt="RBZ ZiG Introduction" style="max-width: 400px; margin: 0 auto;">
             </div>
         </div>
 
-        <h3>3. Civilian Reality vs. Policy</h3>
+        <h3>3. Civilian Reality & The Trust Gap</h3>
         <div class="flex-row">
             <div class="flex-item">
-                <img src="civilian_zig.jpg" alt="Civilian with ZiG" style="max-width: 300px;">
+                <img src="civilian_zig.png" alt="Civilian holding ZiG currency" style="max-width: 400px; margin: 0 auto;">
             </div>
             <div class="flex-item">
-                <p>While the [IMF Forecasts](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE) (see table below) suggest inflation will drop to 12% by 2026, the reality on the ground is more complex. Many civilians still prefer the <b>US Dollar</b> for stability, creating a dual economy where trust in the new ZiG is still being earned.</p>
+                <p>While the [IMF Forecasts](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE) suggest inflation will drop to 12% by 2026, the reality on the ground is governed by public trust. After decades of volatility, many civilians still prefer the <b>US Dollar</b> as a safe haven. The success of the ZiG depends on whether the government can maintain the gold-backing and win back the confidence of the informal market.</p>
             </div>
         </div>
 
         <h3>Data Summary & IMF Forecasts</h3>
         <table class="inflation-table">
             <thead>
-                <tr><th>Year</th><th>Rate (%)</th><th>Key Event</th></tr>
+                <tr>
+                    <th>Year</th>
+                    <th>Inflation Rate (%)</th>
+                    <th>Economic Context</th>
+                </tr>
             </thead>
             <tbody>
-                <tr><td>2010</td><td>3.02%</td><td>Post-Hyperinflation Stability</td></tr>
-                <tr class="highlight"><td>2020</td><td>557.20%</td><td>Currency Collapse Peak</td></tr>
-                <tr><td>2021</td><td>98.55%</td><td>Re-Dollarization "Dip"</td></tr>
-                <tr class="highlight"><td>2024</td><td>553.00%</td><td>Introduction of ZiG</td></tr>
-                <tr><td>2026</td><td>12.00%</td><td>IMF Target Forecast</td></tr>
-            </tbody>
-        </table>
-
-        <p style="margin-top: 30px; font-size: 0.9em; color: #7f8c8d;">
-            Data Source: [St. Louis Fed (FRED)](https://fred.stlouisfed.org/series/FPCPITOTLZGZWE) | Visuals: Python (Matplotlib)
-        </p>
-    </div>
-</body>
-</html>
+                <tr><td>2010</td><td>3.02%</td><td>Multi-Currency Stability</td></tr>
+                <tr class="highlight"><td>2020</td><td>557.20%</td><td>Post-Election Currency Collapse</td></tr>
+                <tr><td>2021</td><td>98.55%</td><td>Policy "Dip" (USD Legalized)</td></tr>
