@@ -26,13 +26,101 @@
             padding: 14px 40px; 
             border: 2px solid #d35400; 
             border-radius: 4px; 
-            transition: all 0.3s ease; 
             background: white; 
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-size: 0.85em;
+            transition: 0.3s;
         }
-        nav a:hover { background: #d35400; color: white; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(211, 84, 0, 0.3); }
+        nav a:hover { background: #d35400; color: white; }
 
         h1 { font-size: 3.5em; margin: 0; letter-spacing: -1.5px; font-weight: 800; }
-        h2 { color: #d35400; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-top: 60px; font
+        h2 { color: #d35400; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-top: 60px; font-size: 2em; }
+        h3 { color: #e67e22; margin-top: 40px; font-size: 1.5em; }
+        
+        .section-img { width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
+        .graph-img { width: 100%; border-radius: 8px; margin: 30px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+
+        .intro-box { border-left: 5px solid #d35400; padding: 30px 40px; background: #fffcf9; margin: 40px 0; font-size: 1.2em; }
+        
+        .data-card-row { display: flex; gap: 25px; margin: 50px 0; flex-wrap: wrap; }
+        .data-card { flex: 1; min-width: 250px; background: #2c3e50; color: white; padding: 35px 20px; border-radius: 8px; text-align: center; }
+        .data-card p { margin: 15px 0 0; font-size: 2.5em; font-weight: bold; color: #e67e22; }
+
+        .cite-link { color: #d35400; text-decoration: none; font-weight: 600; font-style: italic; }
+        .reference-list { background: #fafafa; padding: 40px; border-radius: 8px; font-size: 0.95em; border: 1px solid #f0f0f0; list-style: none; }
+        .reference-list li { margin-bottom: 15px; padding-left: 25px; text-indent: -25px; }
+
+        footer { text-align: center; padding: 80px 20px; color: #bdc3c7; font-size: 0.85em; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>Zimbabwe: An Economic Deep Dive</h1>
+    <p>A Comprehensive Review of Monetary Policy and Inflationary Trends</p>
+</div>
+
+<div class="container">
+    <nav>
+        <a href="data.html">The Dataset</a>
+    </nav>
+
+    <div class="intro-box">
+        This project analyzes the Consumer Price Index (CPI) trends in Zimbabwe from 2010 to 2026. By examining shifts in leadership and currency anchors, we can visualize the resilience and volatility of a nation's economy.
+        <br><br>— <strong>Mzimazisi Mabaso</strong>, Programming Project
+    </div>
+
+    <div class="data-card-row">
+        <div class="data-card">
+            <h4>Decadal Average</h4>
+            <p>79.6%</p>
+        </div>
+        <div class="data-card">
+            <h4>Hyperinflation Peak</h4>
+            <p>557.2%</p>
+        </div>
+        <div class="data-card">
+            <h4>2026 IMF Target</h4>
+            <p>12.0%</p>
+        </div>
+    </div>
+
+    <h2>Visualizing the Trend</h2>
+    <img src="chart.png" class="graph-img" alt="Inflation Chart 2010-2026">
+
+    <h2>Analysis: The Decadal Economic Cycle</h2>
+    
+    <div class="analysis-section">
+        <h3>Phase 1: Stability and Deflation (2010–2016)</h3>
+        <img src="multi_currency.jpg" class="section-img" alt="Multi-currency era">
+        <p>Following the 2008 hyperinflation crisis, Zimbabwe made the radical decision to <strong>stop using the Zimbabwean Dollar</strong> entirely. The nation shifted to a multi-currency system, primarily utilizing the <strong>US Dollar and South African Rand</strong> as legal tender. This brought immediate stability, with inflation rates averaging approximately 3% <a class="cite-link" href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW">(World Bank, 2026)</a>. However, a strengthening USD eventually caused a liquidity crunch, leading to deflation in 2015 <a class="cite-link" href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE">(St. Louis Fed, 2026)</a>.</p>
+        
+        <h3>Phase 2: Political Upheaval and Bond Notes (2017–2018)</h3>
+        <img src="mugabe.jpg" class="section-img" alt="Robert Mugabe transition">
+        <p>The economic landscape shifted in 2017 following the <strong>impeachment and subsequent resignation of Robert Mugabe</strong>. This historic political transition created massive market uncertainty. To solve the shortage of physical US Dollars, the government introduced "Bond Notes." While intended to be 1:1 with the USD, the political instability caused the market to lose faith, ending the deflationary era and sparking a new inflationary climb <a class="cite-link" href="https://www.imf.org/en/Countries/ZWE">(IMF, 2024)</a>.</p>
+
+        <h3>Phase 3: The Currency Crisis (2019–2023)</h3>
+        <img src="rtgs.jpg" class="section-img" alt="RTGS Currency Collapse">
+        <p>In 2019, the formal re-introduction of a local currency, the RTGS dollar, triggered a rapid devaluation. Without sufficient reserves to back it, inflation soared to a staggering 557.2% by 2020 <a class="cite-link" href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE">(FRED, 2026)</a>. This period forced the civilian population to rely almost entirely on the informal parallel market for basic goods and survival.</p>
+
+        <h3>Phase 4: Gold Backing and the ZiG (2024–Present)</h3>
+        <img src="civilian_zig.jpg" class="section-img" alt="Civilian holding ZiG currency">
+        <p>In April 2024, the Reserve Bank introduced the Zimbabwe Gold (ZiG), a structured currency backed by physical gold reserves <a class="cite-link" href="https://www.rbz.co.zw/">(Reserve Bank of Zimbabwe, 2024)</a>. Projections indicate a stabilization toward 12% by 2026. This phase represents the latest attempt to restore confidence by anchoring the national currency to tangible assets rather than policy alone.</p>
+    </div>
+
+    <h2>Scholarly References</h2>
+    <div class="reference-list">
+        <li>Federal Reserve Economic Data (FRED). (2026). Inflation, consumer prices for Zimbabwe (FPCPITOTLZGZWE). St. Louis Fed. <a href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE">View Dataset</a></li>
+        <li>International Monetary Fund (IMF). (2024). Zimbabwe: 2024 Article IV Consultation. <a href="https://www.imf.org/en/Countries/ZWE">View Report</a></li>
+        <li>Reserve Bank of Zimbabwe (RBZ). (2024). 2024 Monetary Policy Statement. <a href="https://www.rbz.co.zw/">Visit RBZ</a></li>
+        <li>World Bank Open Data. (2026). Inflation, consumer prices (annual %) - Zimbabwe. <a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=ZW">View World Bank Data</a></li>
+    </div>
+</div>
+
+<footer>
+    © 2026 Mzimazisi Mabaso | Programming Project | Data Visualization Portfolio
+</footer>
+
+</body>
+</html>
