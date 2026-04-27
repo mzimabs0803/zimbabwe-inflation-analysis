@@ -40,7 +40,6 @@
         
         .section-img { width: 100%; max-height: 450px; object-fit: cover; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
         
-        /* Interactive Graph Styling */
         .graph-link { display: block; position: relative; text-decoration: none; transition: 0.3s; margin: 30px 0; }
         .graph-link:hover { transform: scale(1.01); }
         .graph-img { width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
@@ -58,8 +57,10 @@
         .data-card p { margin: 15px 0 0; font-size: 2.5em; font-weight: bold; color: #e67e22; }
 
         .analysis-section p { margin-bottom: 25px; text-align: justify; }
-        .reference-list { background: #fafafa; padding: 40px; border-radius: 8px; font-size: 0.95em; border: 1px solid #f0f0f0; list-style: none; padding-left: 40px; }
-        .reference-list li { margin-bottom: 15px; text-indent: -25px; }
+
+        .reference-list { background: #fafafa; padding: 40px; border-radius: 8px; font-size: 0.95em; border: 1px solid #f0f0f0; list-style: none; margin-top: 20px; }
+        .reference-list li { margin-bottom: 15px; padding-left: 30px; text-indent: -30px; line-height: 1.6; color: #7f8c8d; }
+        .reference-list a { color: #3498db; text-decoration: none; }
 
         footer { text-align: center; padding: 80px 20px; color: #bdc3c7; font-size: 0.85em; border-top: 1px solid #eee; }
     </style>
@@ -72,9 +73,7 @@
 </div>
 
 <div class="container">
-    <nav>
-        <a href="data.html">The Dataset</a>
-    </nav>
+    <nav><a href="data.html">The Dataset</a></nav>
 
     <div class="intro-box">
         <strong>Abstract:</strong> This project analyzes Consumer Price Index (CPI) trends in Zimbabwe from 2010 to 2026, focusing on how currency regime shifts and political transitions influenced inflation dynamics. It argues that inflation volatility is primarily driven by changes in monetary frameworks and declining policy credibility rather than external shocks.
@@ -82,44 +81,12 @@
     </div>
 
     <div class="data-card-row">
-        <div class="data-card">
-            <h4>Decadal Average</h4>
-            <p>79.6%</p>
-        </div>
-        <div class="data-card">
-            <h4>Hyperinflation Peak</h4>
-            <p>557.2%</p>
-        </div>
-        <div class="data-card">
-            <h4>2026 Performance</h4>
-            <p>4.4%</p>
-        </div>
+        <div class="data-card"><h4>Decadal Average</h4><p>79.6%</p></div>
+        <div class="data-card"><h4>Hyperinflation Peak</h4><p>557.2%</p></div>
+        <div class="data-card"><h4>2026 Performance</h4><p>4.4%</p></div>
     </div>
 
     <h2>Visualizing the Trend</h2>
     <a href="data.html" class="graph-link">
         <img src="chart.png" class="graph-img" alt="Inflation Chart 2010-2026">
-        <div class="graph-overlay">Click to View Full Dataset</div>
-    </a>
-
-    <h2>Analysis: The Decadal Economic Cycle</h2>
-    
-    <div class="analysis-section">
-        <h3>Phase 1: Stability and Deflation (2010–2016)</h3>
-        <img src="multi_currency.jpg" class="section-img" alt="Multi-currency era">
-        <p>Following the 2008 hyperinflation crisis, Zimbabwe adopted a multi-currency system dominated by the US Dollar and South African Rand. This shift effectively eliminated uncontrolled money supply growth, leading to price stability with inflation averaging approximately 3%. However, a strengthening USD eventually reduced export competitiveness and constrained liquidity, culminating in deflation by 2015.</p>
-        
-        <h3>Phase 2: Political Transition and Bond Notes (2017–2018)</h3>
-        <img src="mugabe.jpg" class="section-img" alt="Robert Mugabe transition">
-        <p>The resignation of Robert Mugabe in 2017 marked a significant political turning point. To ease cash shortages, the government introduced bond notes officially pegged at parity with the USD. However, declining confidence undermined the peg. Market participants began pricing bond notes at a discount, signaling the re-emergence of inflationary pressures and highlighting the importance of credibility.</p>
-
-        <h3>Phase 3: Currency Crisis and Hyperinflation (2019–2023)</h3>
-        <img src="rtgs.jpg" class="section-img" alt="RTGS Currency Collapse">
-        <p>In 2019, Zimbabwe reintroduced a local currency (RTGS dollar), ending the multi-currency era. Without sufficient reserves or policy credibility, the currency rapidly depreciated. This triggered exchange rate pass-through effects, causing import prices to surge and inflation to peak at 557.2% in 2020. During this period, a breakdown in formal monetary systems forced a reliance on parallel markets.</p>
-
-        <h3>Phase 4: Gold-Backed Currency and Stabilization (2024–Present)</h3>
-        <img src="civilian_zig.jpg" class="section-img" alt="Civilian holding ZiG currency">
-        <p>In April 2024, the Reserve Bank introduced the Zimbabwe Gold (ZiG), a currency backed by physical gold reserves. While early projections from the IMF suggested a stabilization target of 12% by 2026, current performance data indicates a more significant recovery, with inflation stabilizing at <strong>4.4%</strong>. This represents a pivotal attempt to anchor monetary value to tangible assets and restore public trust.</p>
-
-        <h2>Discussion & Comparative Insight</h2>
-        <p>Zimbabwe’s trajectory illustrates that inflation is not solely a monetary phenomenon but also an institutional one. Money supply dynamics, exchange rate pass-through, and public expectations are the primary drivers. Similar patterns observed in <strong>Venezuela and Argentina</strong> suggest that Zimbabwe’s experience reflects broader structural challenges common in unstable monetary regimes
+        <div class
