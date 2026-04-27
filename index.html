@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zimbabwe Inflation Analysis</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; color: #333; }
+        img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 8px; }
+        .inflation-table { width: 100%; border-collapse: collapse; margin: 25px 0; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        .inflation-table thead tr { background-color: #d35400; color: #ffffff; text-align: left; }
+        .inflation-table th, .inflation-table td { padding: 12px 15px; border: 1px solid #ddd; }
+        .inflation-table tbody tr:nth-of-type(even) { background-color: #f3f3f3; }
+        .highlight { color: #e74c3c; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Zimbabwe's Inflation Journey (2010-2026)</h1>
+    <p>By Mzimazisi Mabaso</p>
+    
+    <p>This project visualizes the volatile inflation history of Zimbabwe. As someone from Zimbabwe, this data reflects the real-world economic shifts I have witnessed, particularly the impact of currency changes on daily life.</p>
+
+    <h3>Visualization: Historical Trends & Forecast</h3>
+    <img src="chart.png" alt="Zimbabwe Inflation Chart">
+    <p><i>The chart shows the massive hyperinflation peak of 2020, the 2021 dip following the re-legalization of USD, and the current 2024 crisis leading into the ZiG currency stabilization forecast.</i></p>
+
+    <h3>Data Summary Table</h3>
+    <table class="inflation-table">
+        <thead>
+            <tr><th>Year</th><th>Inflation Rate (%)</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>2010</td><td>3.02%</td><td>Stability</td></tr>
+            <tr><td class="highlight">2020</td><td class="highlight">557.20%</td><td>Hyperinflation Peak</td></tr>
+            <tr><td>2021</td><td>98.55%</td><td>Policy "Dip"</td></tr>
+            <tr class="highlight"><td>2024</td><td>553.00%</td><td>Current Crisis</td></tr>
+            <tr><td>2026</td><td>12.00%</td><td>IMF Forecast (ZiG)</td></tr>
+        </tbody>
+    </table>
+
+    <p><strong>Dataset Source:</strong> <a href="https://fred.stlouisfed.org/series/FPCPITOTLZGZWE">Federal Reserve Economic Data (FRED)</a></p>
+</body>
+</html>
